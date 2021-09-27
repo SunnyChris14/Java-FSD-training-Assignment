@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Employee_and_habits_using_maps
+public class EmployeeDetails_and_habits_using_maps
 {
 	public static void main(String[] args) 
 	{
