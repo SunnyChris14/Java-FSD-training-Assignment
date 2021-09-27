@@ -58,7 +58,7 @@ public class Book
 		list.add(b8);
 		ArrayList<Object> list9 = new 
 				ArrayList<Object>(Arrays.asList("Hemant Karkare's daughter Jui Karkare","hem@gmail.com","Female",30));
-		Book b9=new Book("Hemant Karkare: A Daughter’s Memoir",list9,750.00);
+		Book b9=new Book("Hemant Karkare: A Daughterâ€™s Memoir",list9,750.00);
 		list.add(b9);
 		ArrayList<Object> list10 = new 
 				ArrayList<Object>(Arrays.asList("Chief Justice of India (CJI) Ranjan Gogoi","Rajan@gmail.com","Male",40));
@@ -89,7 +89,7 @@ public class Book
 		list.stream().filter(x->((Integer)(x.l).get(3)>=30)).limit(5).forEach(y->System.out.println((y.l.get(0)).toString().toUpperCase()));
 		
 		System.out.println("\n[2]. Sum of ages of all female authors younger than 25 is ");
-		Integer summ =list.stream().filter(x->(x.l).get(2).equals("Female")).map(x->(Integer)(x.l).get(3)).reduce(0,(sum,i)->sum+i);
+		Integer summ =list.stream().filter(x->(x.l).get(2).equals("Female")).map(x->(Integer)(x.l).get(3)).filter(x->x<25).reduce(0,(sum,i)->sum+i);
 		System.out.println(summ);
 	}
 
